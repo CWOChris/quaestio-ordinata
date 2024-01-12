@@ -5,7 +5,7 @@
 [website](https://cwochris.github.io/quaestio-ordinata/)
 
 ## Description
-A quiz about Latin phrase worth knowing.
+A quiz about coding fundamentals.
 
 ## User Story
 AS A coding boot camp student
@@ -33,7 +33,7 @@ THEN I can save my initials and score
 - [License](#license)
 
 ## Installation
-None
+None required.
 
 ## Usage
 For fun and for portfolio purposes.
@@ -43,5 +43,3 @@ CWOChris
 
 ## License
 MIT
-
-##### [email: ](mailto:)
