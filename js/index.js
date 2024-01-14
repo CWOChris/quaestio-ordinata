@@ -1,22 +1,22 @@
 const questions = [
     {
         question: "What is the correct syntax for referring to an external script?",
-        options: ["<script src='app.js'></script>", "script src='app.js'", "script href='app.js'", "script name='app.js'"],
+        options: ["script src='app.js'", "<script src='app.js'></script>", "script href='app.js'", "script name='app.js'"],
         correctAnswer: "<script src='app.js'></script>"
     },
     {
         question: "How do you write 'Hello World' in an alert box?",
-        options: ["alert('Hello World')", "msg('Hello World')", "alertBox('Hello World')", "alert('Hello World')"],
+        options: ["msg('Hello World')", "alertBox('Hello World')", "alert('Hello World')", "shmalert(alert('Hello World'))"],
         correctAnswer: "alert('Hello World')"
     },
     {
         question: "How do you create a function in JavaScript?",
-        options: ["function myFunction()", "function:myFunction()", "function = myFunction()", "function myFunction"],
+        options: ["function myFunction()", "function:myFunction()", "function = myFunction()", "myFunction"],
         correctAnswer: "function myFunction()"
     },
     {
         question: "How do you call a function named 'foo'?",
-        options: ["foo()", "call foo()", "foo call()", "foo(whoFlung)"],
+        options: ["foo(whoFlung)", "call foo()", "foo()", "foo call()"],
         correctAnswer: "foo()"
     },
     {        
@@ -26,17 +26,17 @@ const questions = [
     },
 ];
 
-let currentQuestion = 0;
+let currentQuestionIndex = 0;
 let score = 0;
 
 const questionContainer = document.getElementById("question-container");
 const optionsContainer = document.getElementById("options-container");
-const scoreDisplay = document.getElementById("score-display");
-const nextButton = document.getElementById("next-button");
+const scoreDisplay = document.getElementById("score");
+const nextButton = document.getElementById("next-btn");
 
 function showQuestion() {
-    const currentQuestionData = questions[currentQuestionIndex];
-    questionContainer.textContent = currentQuestionData.question;
+    const currentQuestion = questions[currentQuestionIndex];
+    questionContainer.textContent = currentQuestion.question;
 
     optionsContainer.innerHTML = "";
     currentQuestion.options.forEach((option, index) => {
