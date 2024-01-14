@@ -66,4 +66,26 @@ function nextQuestion() {
 
 nextButton.addEventListener("click", nextQuestion);
 
+const timerDisplay = document.getElementById("timer-display");
+let timeRemaining = 300;
+
+function updateTimerDisplay() {
+    const minutes = Math.floor(timeRemaining / 60);
+    const seconds = timeRemaining % 60;
+    timerDisplay.textContent = minutes + ":" + seconds;
+}
+
+function startTimer() {
+    const timeInterval = setInterval(() => {
+        if (timeRemaining > 0) {
+            timeRemaining--;
+            updateTimerDisplay();
+        } else {
+            clearInterval(timeInterval);
+            alert("Time's up! Quiz completed!");
+        }
+    }, 1000);
+}
+
+startTimer();
 showQuestion();
